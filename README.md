@@ -1,4 +1,3 @@
-# Filterism
+# All Sorts
 
-A DSL for filtering active record results based on hash keys with the
-term _is_ in them.
+A DSL for sorting active record results based on hash keys with the term _sort_ in them.
