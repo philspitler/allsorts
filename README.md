@@ -27,13 +27,13 @@ the records may be ordered.
 * http://whatever.com/wherever/?sort_1_name=asc&sort_2_salary=desc
 
 ### Using sortable_fields limiter in your model
-    class Post < ActiveRecord::Base
-      sortable_fields :title, :published_at
+    class User < ActiveRecord::Base
+      sortable_fields :name, :salary
     end
 
 ### Active Record Calls
 #### Using with all the "params" from the URL (usual usage)
-    posts = Post.sort(params).all
+    users = User.sort(params).all
     
 #### Example of how it just takes in a Hash
     #GIVEN THE DATA IN THE DB IS AS FOLLOWS:
