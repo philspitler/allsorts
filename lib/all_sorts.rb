@@ -13,8 +13,11 @@ module AllSorts
 
     keys.each do |key, value|
       keysplit = key.to_s.split('_')
-
-      sorters << "#{keysplit.last} #{params[key]}"
+      unless @sortable_fields and not @sortable_fields.include?(keysplit.last.to_sym)
+        if column_names.include?(keysplit.last)
+          sorters << "#{keysplit.last} #{params[key]}"
+        end
+      end
     end
 
     order(sorters)

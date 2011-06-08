@@ -1,19 +1,19 @@
-david:
+adam:
   id: 1
-  name: David
+  name: Adam
   salary: 80000
   bonus: true
 
-dave:
+dave1:
   id: 2
   name: Dave
-  salary: 150000
+  salary: 9000
   bonus: true
 
-poor_jamis:
+dave2:
   id: 3
-  name: Jamis
-  salary: 9000
+  name: Dave
+  salary: 70000
   bonus: true
 
 admin:
