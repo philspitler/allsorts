@@ -28,3 +28,8 @@ the records may be ordered.
 
 ### Active Record Call
 * posts = Post.sort(params).all
+
+### Using sortable_fields in your model
+    class Post < ActiveRecord::Base
+      sortable_fields :title, :published_at
+    end
