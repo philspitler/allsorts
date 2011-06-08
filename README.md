@@ -27,41 +27,40 @@ the records may be ordered.
 * http://whatever.com/wherever/?sort_1_name=asc&sort_2_salary=desc
 
 ### Active Record Calls
-    #USING WITH ALL THE PARAMS FROM THE URL (usual usage)
+#### USING WITH ALL THE PARAMS FROM THE URL (usual usage)
     posts = Post.sort(params).all
     
-
-    #EXAMPLE OF HOW IT JUST TAKES A HASH
+#### EXAMPLE OF HOW IT JUST TAKES A HASH
     #GIVEN THE DATA IN THE DB IS AS FOLLOWS:
-    #adam:
-    #  id: 1
-    #  name: Adam
-    #  salary: 80000
-    #  bonus: true
-    #
-    #dave1:
-    #  id: 2
-    #  name: Dave
-    #  salary: 9000
-    #  bonus: true
-    #
-    #dave2:
-    #  id: 3
-    #  name: Dave
-    #  salary: 70000
-    #  bonus: true
-    #
-    #admin:
-    #  id: 12
-    #  name: admin
-    #  salary: 10000
-    #  bonus: false
-    #
-    #goofy:
-    #  id: 13
-    #  name: Goofy
-    #  salary: 11000
-    #  bonus: false
+    adam:
+      id: 1
+      name: Adam
+      salary: 80000
+      bonus: true
+    
+    dave1:
+      id: 2
+      name: Dave
+      salary: 9000
+      bonus: true
+    
+    dave2:
+      id: 3
+      name: Dave
+      salary: 70000
+      bonus: true
+    
+    admin:
+      id: 12
+      name: admin
+      salary: 10000
+      bonus: false
+    
+    goofy:
+      id: 13
+      name: Goofy
+      salary: 11000
+      bonus: false
     
     #THE CALL
     users = User.sort({'sort_1_name' => 'asc', 'sort_2_salary' => 'desc'}).all
