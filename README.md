@@ -13,9 +13,9 @@ gem install all_sorts
 ### Usage
 All Sorts was originally developed to fill the need of being able to
 sort by one or multiple columns passed in the URL, however it works with
-ActiveRecord and basically takes in a hash.  This gem adds a sort method
+ActiveRecord and basically takes in a hash.  This gem adds a ".sort" method
 to ActiveRecord which basically does some clever stuff by looking at the
-hash keys, creates a string by which to sort results, and calls order
+hash keys, creates a string by which to sort results, and calls ".order"
 with that string.
 
 ### URL Examples
