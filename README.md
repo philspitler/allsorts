@@ -67,7 +67,11 @@ the records may be ordered.
     users = User.sort({'sort_1_name' => 'asc', 'sort_2_salary' => 'desc'}).all
 
     #RESULTS
-    [#<User id: 1, name: "Adam", salary: 80000, bonus: true, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">, #<User id: 3, name: "Dave", salary: 70000, bonus: true, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">, #<User id: 2, name: "Dave", salary: 9000, bonus: true, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">, #<User id: 13, name: "Goofy", salary: 11000, bonus: false, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">, #<User id: 12, name: "admin", salary: 10000, bonus: false, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">]
+    [#<User id: 1, name: "Adam", salary: 80000, bonus: true, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">,
+    #<User id: 3, name: "Dave", salary: 70000, bonus: true, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">,
+    #<User id: 2, name: "Dave", salary: 9000, bonus: true, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">,
+    #<User id: 13, name: "Goofy", salary: 11000, bonus: false, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">, 
+    #<User id: 12, name: "admin", salary: 10000, bonus: false, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">]
 
     
 
