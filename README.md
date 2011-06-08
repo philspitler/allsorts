@@ -26,11 +26,16 @@ the records may be ordered.
 * http://whatever.com/wherever/?sort_1_name=asc
 * http://whatever.com/wherever/?sort_1_name=asc&sort_2_salary=desc
 
+### Using sortable_fields limiter in your model
+    class Post < ActiveRecord::Base
+      sortable_fields :title, :published_at
+    end
+
 ### Active Record Calls
-#### USING WITH ALL THE PARAMS FROM THE URL (usual usage)
+#### Using with all the "params" from the URL (usual usage)
     posts = Post.sort(params).all
     
-#### EXAMPLE OF HOW IT JUST TAKES A HASH
+#### Example of how it just takes in a Hash
     #GIVEN THE DATA IN THE DB IS AS FOLLOWS:
     adam:
       id: 1
@@ -73,8 +78,3 @@ the records may be ordered.
     #<User id: 12, name: "admin", salary: 10000, bonus: false, created_at: "2011-06-08 15:30:06", updated_at: "2011-06-08 15:30:06">]
 
     
-
-### Using sortable_fields in your model
-    class Post < ActiveRecord::Base
-      sortable_fields :title, :published_at
-    end
