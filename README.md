@@ -18,6 +18,9 @@ to ActiveRecord which basically does some clever stuff by looking at the
 hash keys, creates a string by which to sort results, and calls ".order"
 with that string.
 
+It also adds a ".sortable_fields" method for you to limit by which fields
+the records may be ordered.
+
 ### URL Examples
 * http://whatever.com/wherever/?sort_name=asc
 * http://whatever.com/wherever/?sort_1_name=asc
