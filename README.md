@@ -26,7 +26,8 @@ the records may be ordered.
 * http://whatever.com/wherever/?sort_1_name=asc
 * http://whatever.com/wherever/?sort_1_name=asc&sort_2_salary=desc
 
-## Using sortable_fields limiter in your model
+## Model
+In the model you can limit which fields are filterable. This is optional. If this isn't in your model, all fields are filterable.
 ``` ruby
 class User < ActiveRecord::Base
   sortable_fields :name, :salary
