@@ -1,26 +1,30 @@
-# -*- encoding: utf-8 -*-
-require File.expand_path('../lib/all_sorts/version', __FILE__)
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'all_sorts/version'
 
-Gem::Specification.new do |gem|
-  gem.name        = 'all_sorts'
-  gem.version     = AllSorts::VERSION
-  gem.author      = "Phil Spitler"
-  gem.email       = 'pspitler@gmail.com'
-  gem.homepage    = 'https://github.com/philspitler/allsorts'
-  gem.summary     = 'A DSL for sorting active record results based on hash keys with the term _sort_ in them.'
-  gem.description = ''
+Gem::Specification.new do |spec|
+  spec.name          = "all_sorts"
+  spec.version       = AllSorts::VERSION
+  spec.authors       = ["Phil Spitler"]
+  spec.email         = ["prs@sproutkey.com"]
+  spec.summary     = 'A DSL for sorting results based on hash keys with the term _sort_ in them.'
+  spec.description = ''
+  spec.homepage    = 'https://github.com/philspitler/allsorts'
+  spec.license       = "MIT"
 
-  gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{|f| File.basename(f)}
-  gem.require_paths = ['lib']
+  spec.files         = `git ls-files -z`.split("\x0")
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
 
-  gem.add_development_dependency 'maruku', '~> 0.6'
-  gem.add_development_dependency 'rake', '~> 0.9'
-  gem.add_development_dependency 'rspec', '~> 2.6'
-  gem.add_development_dependency 'simplecov', '~> 0.4'
-  gem.add_development_dependency 'yard', '~> 0.7'
-  gem.add_development_dependency 'sqlite3'
-
-  gem.add_dependency 'activerecord', '>= 3.0.1'
+  spec.add_development_dependency "bundler", "~> 1.6"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "bond"
+  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "activerecord"
+  spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "factory_girl", "~> 4.0"
 end
+
