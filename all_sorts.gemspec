@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.version     = AllSorts::VERSION
   gem.author      = "Phil Spitler"
   gem.email       = 'pspitler@gmail.com'
-  gem.homepage    = 'https://github.com/philspitler/all_sorts'
+  gem.homepage    = 'https://github.com/philspitler/allsorts'
   gem.summary     = 'A DSL for sorting active record results based on hash keys with the term _sort_ in them.'
   gem.description = ''
 
