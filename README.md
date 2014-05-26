@@ -22,7 +22,7 @@ It also adds a ".sortable_fields" method for you to limit by which fields
 the records may be ordered.
 
 ### Globally
-Adds .sort, .sortable_fields and .unsortable_fields methods to all of you models
+Adds .sort, .sortable_fields methods to all of you models
 Somewhere in your apps bootstrap/startup code:
 
 ``` ruby
@@ -30,7 +30,7 @@ ActiveRecord::Base.include(AllSorts)
 ```
 
 ### Locally (in a model)
-Adds .sort, .sortable_fields and .unsortable_fields methods to only the User model
+Adds .sort, .sortable_fields methods to only the User model
 
 ``` ruby
 class User < ActiveRecord::Base
