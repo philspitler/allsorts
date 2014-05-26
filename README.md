@@ -13,7 +13,7 @@ gem install all_sorts
 ## Usage
 All Sorts was originally developed to fill the need of being able to
 sort by one or multiple columns passed in the URL, however it works with
-ActiveRecord and basically takes in a hash.  This gem adds a ".sort" method
+ActiveRecord and basically takes in a hash.  Included as a concern, this gem adds a ".sort" method
 to ActiveRecord which basically does some clever stuff by looking at the
 hash keys, creates a string by which to sort results, and calls ".order"
 with that string.
@@ -21,13 +21,30 @@ with that string.
 It also adds a ".sortable_fields" method for you to limit by which fields
 the records may be ordered.
 
+### Globally
+Adds .sort, .sortable_fields and .unsortable_fields methods to all of you models
+Somewhere in your apps bootstrap/startup code:
+
+``` ruby
+ActiveRecord::Base.include(AllSorts)
+```
+
+### Locally (in a model)
+Adds .sort, .sortable_fields and .unsortable_fields methods to only the User model
+
+``` ruby
+class User < ActiveRecord::Base
+	include AllSorts
+end
+```
+
 ## URL Examples
 * http://whatever.com/wherever/?sort_name=asc
 * http://whatever.com/wherever/?sort_1_name=asc
 * http://whatever.com/wherever/?sort_1_name=asc&sort_2_salary=desc
 
 ## Model
-In the model you can limit which fields are filterable. This is optional. If this isn't in your model, all fields are filterable.
+In the model you can limit which fields are sortable. This is optional. If this isn't in your model, all fields are sortable.
 ``` ruby
 class User < ActiveRecord::Base
   sortable_fields :name, :salary
